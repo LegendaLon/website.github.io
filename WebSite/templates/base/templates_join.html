@@ -1,0 +1,19 @@
+{% extends 'base/join.html' %}
+
+{% block content %}
+
+	{% for a in info %}
+
+		<div class="content">
+			<div class="content-header">
+				<h2>{{a.info_title}}</h2>
+			</div>
+			<div class="content-content">
+				<h2>{{a.info_text}}</h2>
+			</div>
+		</div>
+
+	{% endfor %}
+
+{% endblock %}
+

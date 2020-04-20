@@ -1,0 +1,21 @@
+{% extends 'coolstory/base.html' %}
+
+{% block person %}
+
+	{% for a in person %}
+		
+		<div class="content-person">
+			<div class="content-header">
+				<h1><a href="{% url 'coolstory:detail_story' a.id %}">{{a.person_name}}</a></h1>
+			</div>
+			<div class="person-detail-img">
+				<img src="{{a.person_photo.url}}">
+			</div>
+			<div class="person-detail-author">
+				<h3>Автор: {{a.person_author}}</h3>
+			</div>
+		</div>
+
+	{% endfor %}
+
+{% endblock %}
