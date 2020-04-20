@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Animete Text</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="loader">
@@ -21,9 +21,9 @@
 	</div>
     <div> </div>
     <div class='button-btn'>
-        <a href='home.html'>
-            My Project
-        </a>
+        <a href='home.html'>My Project</a>
+        <a href="#" >{{ n }}</a>
+        <a href='home.html'>My Project</a>
     </div>
 </body>
 </html>

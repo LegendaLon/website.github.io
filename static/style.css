@@ -22,21 +22,27 @@ body {
 .loader span {
     position: relative;
     font-size: 5em;
-    color: #fff;
+    color: black;
     display: inline-block;
     text-transform: uppercase;
-    animation: animete 1.5s ease-in-out infinite;
+    animation: animete 3s ease-in-out infinite;
     animation-delay: calc(0.1s * var(--i));
+    margin: 4px;
 }
 @keyframes animete {
     0%, 100% {
+        color: black;
         transform: translateX(0);
     }
     20% {
-        transform: translateX(+20px);
+        color: white;
+        font-size: -1em;
     }
     80% {
-        transform: translateX(-30px);
+        color: black;
+    }
+    30% {
+        transform: translateX(+20px);
     }
 }
 
@@ -51,6 +57,7 @@ body {
     padding: 20px;
     text-decoration: none;
     background-color: var(--backgroundcolor);
+    margin: 10px;
 }
 .button-btn a:hover {
     color: aqua;
