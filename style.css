@@ -5,13 +5,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-    background-color: #000;
+    background-color: var(--backgroundcolor);
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
+:root {
+    --backgroundcolor: #000;
+}
+
 .loader {
     position: relative;
 }
@@ -25,13 +29,35 @@ body {
     animation-delay: calc(0.1s * var(--i));
 }
 @keyframes animete {
-    0%, 40%, 100% {
-        transform: translateY(0);
+    0%, 100% {
+        transform: translateX(0);
     }
     20% {
-        transform: translateY(-40px);
+        transform: translateX(+20px);
     }
-    60% {
-        transform: translateY(+20px);
+    80% {
+        transform: translateX(-30px);
     }
+}
+
+.button-btn {
+    display: block;
+    position: absolute;
+    margin-top: 140px;
+}
+.button-btn a {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    background-color: var(--backgroundcolor);
+}
+.button-btn a:hover {
+    color: aqua;
+    border: 2px solid aqua;
+    transition: 3s;
+}
+.button-btn a:pressed {
+    transition: 2s;
+    color: orange;
 }
