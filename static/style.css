@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: var(--backgroundcolor);
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+:root {
+    --backgroundcolor: #000;
+}
+
+.loader {
+    position: relative;
+}
+.loader span {
+    position: relative;
+    font-size: 5em;
+    color: black;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: animete 3s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+    margin: 4px;
+}
+@keyframes animete {
+    0%, 100% {
+        color: black;
+        transform: translateX(0);
+    }
+    20% {
+        color: white;
+        font-size: -1em;
+    }
+    80% {
+        color: black;
+    }
+    30% {
+        transform: translateX(+20px);
+    }
+}
+
+.button-btn {
+    display: block;
+    position: absolute;
+    margin-top: 140px;
+}
+.button-btn a {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    background-color: var(--backgroundcolor);
+    margin: 10px;
+}
+.button-btn a:hover {
+    color: aqua;
+    border: 2px solid aqua;
+    transition: 3s;
+}
+.button-btn a:pressed {
+    transition: 2s;
+    color: orange;
+}
