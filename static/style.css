@@ -19,6 +19,11 @@ body {
 .loader {
     position: relative;
 }
+.text-1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 6em;
+}
 .loader span {
     position: relative;
     font-size: 5em;
@@ -67,4 +72,15 @@ body {
 .button-btn a:pressed {
     transition: 2s;
     color: orange;
+}
+
+
+/* Настройки бота */
+.command-value {
+    display: block;
+}
+.command-value textarea {
+    color: aqua;
+    border: none;
+    border-radius: 20px;
 }
